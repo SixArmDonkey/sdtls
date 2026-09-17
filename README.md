@@ -49,7 +49,7 @@ Designed explicitly for hostile physical environments, strict zero-allocation me
 5. **Stateless Cookie:** Server validates version/ID and generates a 256-bit challenge. 
    - Server allocates **zero** memory.
    - Computes:
-     $$\text{HMAC-SHA256}(\text{Server\_Secret}, \text{Timestamp} + \text{Challenge} + \text{Device\_ID})$$
+     $$\text{HMAC-SHA256}(\text{Server\_Secret}, \text{Timestamp} + \text{Challenge} + \text{DeviceID})$$
    - Returns Challenge, Timestamp, and Cookie.
 
 ### Phase 2: Asymmetric Authentication [Packet Type `0x01`]
